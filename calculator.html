@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+
+    <script>
+        function AC()
+        {
+            document.getElementById("result").value="";
+        }
+        function show(input)
+        {
+            document.getElementById("result").value+=input;
+        }
+        function cal()
+        {
+            var output=eval(document.getElementById("result").value);
+            document.getElementById("result").value=output;
+        }
+    </script>
+    <h3>Calculator</h3>
+   <table border="1">
+       <tr>
+           <td colspan="3"><input type="text" class="result-box" id="result"></td>
+           <td align="center"><button class="button-color" onclick="AC()">AC</button></td>
+       </tr>
+       <tr>
+           <td align="center"><button class="button-color" onclick="show('1')">1</button></td>
+           <td align="center"><button class="button-color" onclick="show('2')">2</button></td>
+           <td align="center"><button class="button-color" onclick="show('3')">3</button></td>
+           <td align="center"><button class="button-color" onclick="show('+')">+</button></td>
+       </tr>
+       <tr>
+        <td align="center"><button class="button-color" onclick="show('4')">4</button></td>
+        <td align="center"><button class="button-color" onclick="show('5')">5</button></td>
+        <td align="center"><button  class="button-color"onclick="show('6')">6</button></td>
+        <td align="center" ><button class="button-color" onclick="show('-')">-</button></td>
+    </tr>
+    <tr>
+        <td align="center"><button class="button-color" onclick="show('7')">7</button></td>
+        <td align="center"><button class="button-color" onclick="show('8')">8</button></td>
+        <td align="center"><button class="button-color" onclick="show('9')">9</button></td>
+        <td align="center"><button class="button-color" onclick="cal()">=</button></td>
+    </tr>
+    <tr>
+        <td align="center"><button class="button-color" onclick="show('0')">0</button></td>
+        <td align="center"><button class="button-color" onclick="show('*')">*</button></td>
+        <td align="center"><button class="button-color" onclick="show('/')">/</button></td>
+        <td align="center"><button class="button-color" onclick="show('%')">%</button></td>
+    </tr>
+
+   </table>
+        
+</body>
+</html>
